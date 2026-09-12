@@ -9,16 +9,16 @@ class Solution {
             else{
                 if(stack.isEmpty()){ return false;}
                 else{
-                if(i==')' && stack.peek()=='('){
-                   stack.pop();
+                if(i==')' && stack.pop()=='('){
+                   continue;
                 }
-                else if(i==']' && stack.peek()=='['){
+                else if(i==']' && stack.pop()=='['){
                    
-                   stack.pop();
+                   continue;
                 }
-                else if(i=='}' && stack.peek()=='{'){
+                else if(i=='}' && stack.pop()=='{'){
                   
-                   stack.pop();
+                   continue;
                 }
                 else{
                     return false;
